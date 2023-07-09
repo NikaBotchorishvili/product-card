@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+:root{
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --font-main: 'Fraunces', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--cream);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.card{
+    background-color: var(--white);
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.card .col{
+    height: 100%;
+}
+
+.card .card-col-2{
+    
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-category-header{
+    color: var(--darkGrayishBlue);
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.card-header{
+    font-family: var(--font-main);
+}
+
+.card-description{
+    color: var(--darkGrayishBlue);
+    font-family: var(--font-secondary);
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.price{
+    color: var(--darkCyan);
+}
+.old-price{
+    color: var(--darkGrayishBlue);
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+
+.card-btn{
+    color: var(--white);
+    font-family: var(--font-secondary);
+    gap: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    background: var(--darkCyan);
+    border: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    transition: background 0.1s linear;
+    cursor: pointer;
+}
+
+.card-btn:hover{
+    background: var(--veryDarkBlue);
+}
+.card-btn > .cart-icon{
+    width: 1rem;
+}
+
+.card-image{
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+@media only screen and (max-width: 560px)  {
+    .card{
+        flex-direction: column;
+        width: 300px;
+        height: fit-content;
+    }
+    .card-image{
+        width: 100%;
+    }
+    .card .card-col-2{
+        gap: 10px;
+    }
+}
